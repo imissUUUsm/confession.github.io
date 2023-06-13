@@ -20,16 +20,36 @@
 <body>
 	<div class="yesido">
 			<div class="form-row1">
-					<form action="https://formsubmit.co/abf47fe2aa698456e7399ab17c1d639b" method="POST">
+					<form onsubmit="sendEmail(); reset(); return false;">
 					<h1>Write it down, will ya?</h1>
 					<br>
+					<input type="hidden" name="_captcha" value="false">
+					<input type="hidden" name="_next" value="index4.html">
+					<div class="form-row2">
 					<input type="gmail" id="name" name="Gmail" placeholder="Gmail" required><br>
 					<input type="text" id="name" name="Name" placeholder="Write your alias/name." required><br>
 					<br>
 					<textarea id="message" name="message" rows="3"> So what's the chika? </textarea><br><br>
 					<button type="submit" id="submit"> Submit! </button><br><br>
+					</div>
 				</form>
 			</div>
 	</div>
+<script src="https://smtpjs.com/v3/smtp.js">
+function sendEmail()
+
+Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "thyaesthete@gmail.com",
+    Password : "3DB64F06AC45AEAE112FAF7BCA74FBF44391",
+    To : 'them@website.com',
+    From : "you@isp.com",
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+
+</script>
 </body>
 </html>
