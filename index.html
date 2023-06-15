@@ -6,11 +6,19 @@
 <style>
 	*{
 	font-family: Georgia, serif;
-	padding: 30px;
 	text-align: center;
+	}
+	body{
 	background: rgb(255,208,246);
 	background: linear-gradient(to-right, 90deg, rgba(255,208,246,1) 0%, rgba(255,127,231,1) 50%, rgba(255,0,207,1) 100%);
-	}
+}
+	.front-page{
+	  background: rgb(255, 120, 196);
+	  box-shadow: 4px 4px 5px 3px lightpink;
+	  margin: auto;
+	  width: 50%;
+	  padding: 2px;
+}
 	button{
 	background-color: pink;
 	border: none;
@@ -22,20 +30,63 @@
 	margin: 4px 2px;
 	cursor: pointer;
 	}
+	a{
+	background-color: pink;
+	border: none;
+	padding: 20px 34px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	margin: 4px 2px;
+	cursor: pointer;
+	}
+	a:visited {
+		color: black;
+		background-color: transparent;
+		text-decoration: none;
+		}
+		a:hover {
+		color: black;
+		background-color: transparent;
+		text-decoration: underline;
+		}
+</style>
 </style>
 </head>
 <body>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
 <div class="front-page">
 	<h1> Do you have something to say? </h1>
-		<div class="button-row1">
-			<form action="index2.html">
-				<button type="submit"> Yes, I do! </button>
-			</form>
-			<form action="index3.html">
-				<button type="submit"> Nah </button>
-			</form>
-		</div>
+		<a href="#" onclick="randomSite();">Yes, I do!</a>
+		<a href="index3.html">Nah</a>
 	<h6>Copyright Claim - Noreen Mackno (2023)</h6>
 </div>
 </body>
 </html>
+	<script>
+    var sites = [
+        'index2.html',
+        'index-a.html',
+	  'index-b.html',
+	  'index-c.html',
+
+ 
+    ];
+
+    function randomSite() {
+        var i = parseInt(Math.random() * sites.length);
+        location.href = sites[i];
+    }
+</script>
